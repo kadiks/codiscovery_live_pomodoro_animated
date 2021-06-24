@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+}
+
+.main-timer {
+  background: hsla(358, 85%, 68%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(358, 85%, 68%, 1) 0%,
+    hsla(41, 98%, 49%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(358, 85%, 68%, 1) 0%,
+    hsla(41, 98%, 49%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(358, 85%, 68%, 1) 0%,
+    hsla(41, 98%, 49%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#f3696e", endColorstr="#f8a902", GradientType=1 );
+}
+
+.second-timer {
+  background: hsla(145, 83%, 74%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(145, 83%, 74%, 1) 0%,
+    hsla(204, 77%, 76%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(145, 83%, 74%, 1) 0%,
+    hsla(204, 77%, 76%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(145, 83%, 74%, 1) 0%,
+    hsla(204, 77%, 76%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#87F4B5", endColorstr="#93CBF1", GradientType=1 );
+}
+
+.main-timer #timer-circle {
+  stroke: #de3838;
+}
+.main-timer #countdown {
+  color: #de3838;
+}
+.second-timer #timer-circle {
+  stroke: #419f44;
+}
+.second-timer #countdown {
+  color: #419f44;
+}
+
+#countdown {
+  text-shadow: 1px 1px 0 #fff;
+}
+
+#countdown,
+#countdown-circle {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 2em;
+}
+
+#countdown p {
+  font-family: "Press Start 2P", cursive;
+}
+
+#countdown-circle {
+  position: absolute;
+  top: 0;
+}
+
+#circle {
+  width: 300px;
+  transform: rotate(-90deg);
+}
+
+#timer-circle {
+  stroke-width: 5px;
+  stroke-dasharray: 1338;
+  stroke-dashoffset: 1338;
+  fill: transparent;
+  animation: dash 2s linear infinite;
+}
+
+#timer-circle.end {
+  stroke-dashoffset: 0;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: -1338;
+  }
+}
